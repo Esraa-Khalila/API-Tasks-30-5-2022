@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+
+<p id="demo"></p>
+<form action="json.php" method="post">
+ <!-- <p>Your name: <input type="text" name="name" /></p>
+ <p><input type="submit" name='add' value='add'/></p> -->
+  <p>Your id: <input type="text" name="id1" /></p>
+  <p>Your name: <input type="text" name="name1" /></p>
+<p><input type="submit" name='update' value='update'/></p>
+</form>
+
+<script>
+
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  document.getElementById("demo").innerHTML = this.responseText;
+  
+    
+}
+xmlhttp.open("GET", "json.php" );
+xmlhttp.send();
+</script>
+
+</body>
+</html>
